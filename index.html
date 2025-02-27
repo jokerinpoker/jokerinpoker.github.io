@@ -4,30 +4,156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的个人网站</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 基础样式 */
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #1d1d1f;
+            background-color: #fbfbfd;
+        }
+
+        /* 导航栏样式 */
+        .navbar {
+            background-color: rgba(251, 251, 253, 0.8);
+            backdrop-filter: blur(20px);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            box-shadow: 0 1px 10px rgba(0,0,0,0.05);
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: #1d1d1f;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #86A6A6;
+        }
+
+        /* 内容区域样式 */
+        .section {
+            padding: 80px 20px;
+            min-height: 100vh;
+        }
+
+        #home {
+            background-color: #F0F1F3;
+            text-align: center;
+            padding-top: 120px;
+        }
+
+        #portfolio {
+            background-color: #fbfbfd;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px;
+        }
+
+        .portfolio-item {
+            background-color: #F6F5F5;
+            padding: 30px;
+            border-radius: 16px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        #contact {
+            background-color: #E8E9EB;
+            text-align: center;
+        }
+
+        .contact-info {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255,255,255,0.7);
+            border-radius: 16px;
+        }
+
+        h1, h2, h3 {
+            color: #1d1d1f;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 36px;
+            font-weight: 500;
+            margin-bottom: 40px;
+        }
+
+        .contact-info a {
+            color: #86A6A6;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #6A8383;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">首页</a></li>
-                <li><a href="#about">关于</a></li>
-                <li><a href="#projects">项目</a></li>
-                <li><a href="#contact">联系</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <a href="#home">首页</a>
+        <a href="#portfolio">作品展示</a>
+        <a href="#contact">联系我</a>
+    </nav>
 
-    <main>
-        <section id="home">
-            <h1>欢迎来到我的网站</h1>
-        </section>
-    </main>
+    <!-- 首页部分 -->
+    <section id="home" class="section">
+        <h1>欢迎来到我的个人网站</h1>
+        <p>我是一名热爱创作的开发者</p>
+    </section>
 
-    <footer>
-        <p>&copy; 2024 jokerinpoker</p>
-    </footer>
+    <!-- 作品展示部分 -->
+    <section id="portfolio" class="section">
+        <h2>作品展示</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <h3>项目一</h3>
+                <p>项目描述...</p>
+            </div>
+            <div class="portfolio-item">
+                <h3>项目二</h3>
+                <p>项目描述...</p>
+            </div>
+            <div class="portfolio-item">
+                <h3>项目三</h3>
+                <p>项目描述...</p>
+            </div>
+        </div>
+    </section>
 
-    <script src="js/main.js"></script>
+    <!-- 联系方式部分 -->
+    <section id="contact" class="section">
+        <h2>联系我</h2>
+        <div class="contact-info">
+            <p>邮箱：your.email@example.com</p>
+            <p>GitHub：<a href="https://github.com/yourusername">github.com/yourusername</a></p>
+            <p>微信：your_wechat_id</p>
+        </div>
+    </section>
 </body>
 </html> 
