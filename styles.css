@@ -210,36 +210,4 @@ footer {
     .works-grid {
         grid-template-columns: 1fr;
     }
-}
-
-/* 联系表单样式 */
-#contact-form {
-    max-width: 600px;
-    margin: 0 auto 2rem;
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid rgba(74, 55, 40, 0.2);
-    border-radius: 8px;
-    font-size: 1rem;
-    background: #ffffff;
-    transition: border-color 0.3s ease;
-}
-
-.form-group textarea {
-    height: 150px;
-    resize: vertical;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: #003153;
 } 
